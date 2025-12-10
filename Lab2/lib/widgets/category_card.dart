@@ -17,16 +17,16 @@ class CategoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Сликата горе
+
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.network(
                 category.image,
-                height: 100, // фиксна висина
+                height: 100,
                 fit: BoxFit.cover,
               ),
             ),
-            // Името
+
             Padding(
               padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
               child: Text(
@@ -35,14 +35,14 @@ class CategoryCard extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            // Описот со ограничување на редови
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 6),
               child: Text(
                 category.description,
                 style: TextStyle(fontSize: 12, color: Colors.grey[700]),
-                maxLines: 3,           // ограничување на редови
-                overflow: TextOverflow.ellipsis, // ... ако е подолго
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
               ),
             ),

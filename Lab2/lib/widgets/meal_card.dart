@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import '../models/meal.dart';
+import 'package:flutter/material.dart';
+
 
 class MealCard extends StatelessWidget {
   final Meal meal;
@@ -17,21 +18,21 @@ class MealCard extends StatelessWidget {
         ),
         elevation: 3,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center, // текстот центриран
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 10), // ✔️ простор над сликата
+            SizedBox(height: 10),
 
             ClipRRect(
               borderRadius: BorderRadius.circular(14),
               child: Image.network(
                 meal.image,
-                height: 140,            // ✔️ поголема слика
+                height: 140,
                 width: double.infinity,
-                fit: BoxFit.cover,      // ✔️ изгледа убава
+                fit: BoxFit.cover,
               ),
             ),
 
-            SizedBox(height: 10), // ✔️ простор под сликата
+            SizedBox(height: 10),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -39,7 +40,7 @@ class MealCard extends StatelessWidget {
                 meal.name,
                 textAlign: TextAlign.center,
                 maxLines: 2,
-                overflow: TextOverflow.ellipsis, // нема overflow
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w600,

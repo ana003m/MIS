@@ -12,6 +12,11 @@ class Meal {
       image: json['strMealThumb'],
     );
   }
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'name': name,
+    'image': image,
+  };
 }
 
 class MealDetail {
